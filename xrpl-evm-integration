@@ -7,13 +7,13 @@ const Web3 = require("web3");
 const xrplClient = new xrpl.Client("wss://s.altnet.rippletest.net:51233");
 
 // Connect to EVM Sidechain
-const web3 = new Web3("https://your-evm-testnet-url"); // Replace with your EVM RPC URL
+const web3 = new Web3("testnet.bnbchain.org/faucet-smart"); // your EVM RPC URL
 
 // ABI of the deployed smart contract
 const contractAbi = [
   // Add the ABI of your deployed CarbonCreditValidator contract here
 ];
-const contractAddress = "0xYourContractAddress"; // Replace with your contract address
+const contractAddress = "0xYourContractAddress"; // contract address
 
 const contract = new web3.eth.Contract(contractAbi, contractAddress);
 
@@ -34,7 +34,7 @@ const tx = {
     TransactionType: "Payment",
     Account: wallet.address,
     Amount: xrpl.xrpToDrops(amount),
-    Destination: "DESTINATION_WALLET", // Replace with the user's wallet
+    Destination: "0x98a9e7dB479256e1716dEa33aA8820023B21D490", //  user's wallet
   };
 
   const prepared = await xrplClient.autofill(tx);

@@ -1,0 +1,103 @@
+/* Sidebar and Main Content Layout */
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #2e8b57;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    margin-left: 270px; /* Adjust for sidebar width */
+    padding: 20px;
+    width: 100%;
+}
+
+.dashboard {
+    margin-top: 20px;
+}
+
+.wallet-summary, .portfolio-chart, .transactions-table {
+    margin-bottom: 30px;
+}
+
+.wallet-summary h2, .portfolio-chart h2, .transactions-table h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Marketplace Styling */
+.marketplace {
+    margin-left: 270px; /* Adjust for sidebar width */
+    padding: 20px;
+}
+
+.tokens-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.token-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.token-card h3 {
+    font-size: 18px;
+}
+
+.buy-button {
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #267d4a;
+}
+
+.buy-token-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.buy-token-section label,
+.buy-token-section input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.buy-token-section input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

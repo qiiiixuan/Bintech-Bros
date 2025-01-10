@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard - Carbon Token Trading</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="dashboard.html" class="active">User Dashboard</a></li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>User Dashboard</h1>
+      </header>
+
+      <section class="dashboard">
+        <div class="wallet-summary">
+          <h2>Wallet Summary</h2>
+          <p>
+            <strong>Wallet Address:</strong> <span id="wallet-address"></span>
+          </p>
+          <p><strong>Balance:</strong> <span id="wallet-balance"></span> CTN</p>
+        </div>
+
+        <div class="portfolio-chart">
+          <h2>Portfolio Insights</h2>
+          <canvas id="portfolio-chart"></canvas>
+        </div>
+
+        <div class="transactions-table">
+          <h2>Recent Transactions</h2>
+          <table id="transactions-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Transactions will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Carbon Token Trading Platform</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace - Carbon Token Trading</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="dashboard.html">User Dashboard</a></li>
+        <li><a href="marketplace.html" class="active">Marketplace</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>Marketplace</h1>
+      </header>
+
+      <section class="marketplace">
+        <!-- Available Tokens -->
+        <div class="tokens-list">
+          <h2>Available Carbon Tokens</h2>
+          <div class="token-card">
+            <h3>Token A</h3>
+            <p><strong>Price:</strong> 10 CTN</p>
+            <button class="buy-button" onclick="buyToken('Token A', 10)">
+              Buy Token A
+            </button>
+          </div>
+
+          <div class="token-card">
+            <h3>Token B</h3>
+            <p><strong>Price:</strong> 15 CTN</p>
+            <button class="buy-button" onclick="buyToken('Token B', 15)">
+              Buy Token B
+            </button>
+          </div>
+
+          <div class="token-card">
+            <h3>Token C</h3>
+            <p><strong>Price:</strong> 20 CTN</p>
+            <button class="buy-button" onclick="buyToken('Token C', 20)">
+              Buy Token C
+            </button>
+          </div>
+        </div>
+
+        <!-- Buy Token Section -->
+        <div class="buy-token-section">
+          <h2>Buy Carbon Token</h2>
+          <form id="buy-form">
+            <label for="token-name">Token:</label>
+            <select id="token-name">
+              <option value="Token A">Token A</option>
+              <option value="Token B">Token B</option>
+              <option value="Token C">Token C</option></select
+            ><br /><br />
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" min="1" required /><br /><br />
+
+            <button type="submit" class="buy-button">Buy Now</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Carbon Token Trading Platform</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

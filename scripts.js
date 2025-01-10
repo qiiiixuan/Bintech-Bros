@@ -24,6 +24,25 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Wallet address copied to clipboard!');
     });
   }
+
+  // Example Transactions Data
+const transactionsData = [
+  { date: '2025-01-01', type: 'Buy', amount: 50, status: 'Completed' },
+  { date: '2025-01-05', type: 'Sell', amount: 30, status: 'Pending' },
+  { date: '2025-01-10', type: 'Buy', amount: 70, status: 'Completed' },
+];
+
+// Populate Transactions Table
+const transactionsTable = document.getElementById('transactions-table').querySelector('tbody');
+transactionsData.forEach(({ date, type, amount, status }) => {
+  const row = `<tr>
+    <td>${date}</td>
+    <td>${type}</td>
+    <td>${amount} CTN</td>
+    <td>${status}</td>
+  </tr>`;
+  transactionsTable.insertAdjacentHTML('beforeend', row);
+});
   
   // Example for portfolio chart (using Chart.js)
   const ctx = document.getElementById('portfolio-chart').getContext('2d');

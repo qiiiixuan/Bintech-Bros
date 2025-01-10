@@ -8,7 +8,104 @@ const xrplClient = new xrpl.Client("wss://s.altnet.rippletest.net:51233");
 const web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545");
 
 // ABI and contract address
-const contractAbi = [ /* Corrected ABI */ ];
+const contractAbi = [[
+   {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+   },
+   {
+    "inputs": [],
+    "name": "admin",
+    "outputs": [
+     {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "name": "claims",
+    "outputs": [
+     {
+      "internalType": "address",
+      "name": "user",
+      "type": "address"
+     },
+     {
+      "internalType": "uint256",
+      "name": "amount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "string",
+      "name": "proof",
+      "type": "string"
+     },
+     {
+      "internalType": "bool",
+      "name": "validated",
+      "type": "bool"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "nextClaimId",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "amount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "string",
+      "name": "proof",
+      "type": "string"
+     }
+    ],
+    "name": "submitClaim",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "claimId",
+      "type": "uint256"
+     }
+    ],
+    "name": "validateClaim",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   }
+  ] ];
 const contractAddress = "0xb66382c4632F6009FF1fd6AA0dF7Cc6a4453e826";
 const contract = new web3.eth.Contract(contractAbi, contractAddress);
 

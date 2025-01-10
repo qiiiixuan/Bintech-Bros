@@ -34,7 +34,7 @@ async function mintCarbonToken(walletSeed, amount) {
             TransactionType: "Payment",
             Account: wallet.address,
             Amount: xrpl.xrpToDrops(amount),
-            Destination: "rYourValidXRPAddressHere", // Replace with a valid address
+            Destination: "rPvsHxgPhQzq8nZyEJ7WGhydjf5Mfu3KUz", // Replace with a valid address
         };
         const prepared = await xrplClient.autofill(tx);
         const signed = wallet.sign(prepared);
@@ -51,7 +51,7 @@ async function mintCarbonToken(walletSeed, amount) {
 // Example Usage
 (async () => {
     try {
-        await mintCarbonToken("your-valid-wallet-seed", 10);
+        await mintCarbonToken("sEdTmwc4FWFywzumaLRS14w6LQa48Nm", 10);
         await submitCarbonClaim(10, "https://example.com/proof-of-offset");
     } catch (error) {
         console.error("Error in main process:", error);

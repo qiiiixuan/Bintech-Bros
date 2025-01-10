@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Dashboard - Carbon Token Trading</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>Navigation</h2>
-      <ul>
-        <li><a href="dashboard.html" class="active">User Dashboard</a></li>
-        <li><a href="marketplace.html">Marketplace</a></li>
-      </ul>
-    </aside>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <ul>
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+        </ul>
+      </nav>
 
     <!-- Main Content -->
     <div class="main-content">
@@ -23,34 +27,64 @@
       </header>
 
       <section class="dashboard">
-        <div class="wallet-summary">
-          <h2>Wallet Summary</h2>
-          <p>
-            <strong>Wallet Address:</strong> <span id="wallet-address"></span>
-          </p>
-          <p><strong>Balance:</strong> <span id="wallet-balance"></span> CTN</p>
-        </div>
+        <div class="dashboard">
+          <!-- Wallet Summary -->
+          <div class="wallet-summary">
+            <h2>Wallet Summary</h2>
+            <div class="wallet-card">
+              <p><strong>Wallet Address:</strong></p>
+              <div class="wallet-address">
+                <span id="wallet-address">rXJK12...abcd</span>
+                <button id="copy-address" onclick="copyToClipboard()">
+                  Copy
+                </button>
+              </div>
+              <p>
+                <strong>Total Balance:</strong>
+                <span id="total-balance">450 CTN</span>
+              </p>
+            </div>
+            <div class="holdings">
+              <h3>Your Holdings</h3>
+              <table class="holdings-table">
+                <thead>
+                  <tr>
+                    <th>Token</th>
+                    <th>Quantity</th>
+                    <th>Value (USD)</th>
+                    <th>% of Portfolio</th>
+                  </tr>
+                </thead>
+                <tbody id="holdings-data">
+                  <!-- Token data will be dynamically inserted here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-        <div class="portfolio-chart">
-          <h2>Portfolio Insights</h2>
-          <canvas id="portfolio-chart"></canvas>
-        </div>
+          <!-- Portfolio Chart -->
+          <div class="portfolio-chart">
+            <h2>Portfolio Insights</h2>
+            <canvas id="portfolio-chart"></canvas>
+          </div>
 
-        <div class="transactions-table">
-          <h2>Recent Transactions</h2>
-          <table id="transactions-table">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Transactions will be inserted here -->
-            </tbody>
-          </table>
+          <!-- Recent Transactions -->
+          <div class="transactions-table">
+            <h2>Recent Transactions</h2>
+            <table id="transactions-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Transactions will be dynamically inserted here -->
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </div>
